@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BAC-TDA Build — V3 fresh</title>
+<style>
+:root{--paper:#f5efde;--paper2:#e6dcc1;--ink:#1c2230;--ink2:#4a5566;--red:#a83c2a;--yel:#fff5d8;--grn:#2a6d3a;--blu:#1e4a8a;--org:#c26b2d}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,Inter,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;padding:env(safe-area-inset-top,12px) 12px env(safe-area-inset-bottom,40px)}
+.wrap{max-width:980px;margin:0 auto}
+header{text-align:center;padding:20px 0;border-bottom:2px solid var(--ink);margin-bottom:24px}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(28px,5vw,44px);line-height:1.05;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--ink2);font-weight:400}
+.sub{font-size:14px;color:var(--ink2);margin-top:8px}
+h2{font-family:Georgia,serif;font-weight:500;font-size:22px;margin:6px 0 12px}
+h3{font-family:Georgia,serif;font-weight:500;font-size:16px;margin:14px 0 8px}
+.notice{background:#fce6df;border:2px solid var(--red);padding:14px 16px;font-size:13px;margin-bottom:24px;border-radius:4px}
+.notice strong{color:var(--red);display:block;margin-bottom:4px;font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:8px 0 28px}
+.step{background:var(--paper);border:1px solid var(--ink);padding:18px 20px;margin-bottom:18px;border-radius:4px}
+.step-num{font-family:Menlo,monospace;font-size:11px;letter-spacing:.15em;color:var(--red);font-weight:700;margin-bottom:4px}
+.hw{background:var(--paper2);padding:10px 12px;font-size:13px;border-left:3px solid var(--org);margin:10px 0 12px;border-radius:2px}
+.hw strong{color:var(--org);font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
+ol{margin-left:22px;font-size:14px}
+ol li{margin-bottom:6px}
+.verify{background:#e4efd9;padding:10px 12px;font-size:13px;border-left:3px solid var(--grn);margin-top:12px;border-radius:2px}
+.verify strong{color:var(--grn);font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
+.note{background:#fffbeb;padding:10px 12px;font-size:13px;border-left:3px solid var(--org);margin-top:10px;border-radius:2px}
+.toc{background:var(--paper2);border:1px solid var(--ink);padding:14px 18px;margin-bottom:24px;font-size:13px}
+.toc strong{font-family:Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.toc a{display:inline-block;margin:3px 6px 3px 0;padding:3px 9px;background:var(--paper);border:1px solid var(--ink);text-decoration:none;color:var(--ink);font-family:Menlo,monospace;font-size:11px;border-radius:2px}
+.toc a:hover{background:var(--ink);color:var(--paper)}
+.toc .new{background:var(--yel);font-weight:700}
+footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--ink);font-size:11px;color:var(--ink2);text-align:center}
+.step-photos{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px;align-items:stretch}
+.step-photo{flex:0 0 140px;background:var(--paper2);border:1px solid var(--ink);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.step-photo img{display:block;width:100%;height:auto;background:#000}
+.step-photo .lbl{font-family:Menlo,monospace;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2);padding:5px 6px;border-top:1px solid var(--ink);background:var(--paper);flex:1 1 auto}
+@media(max-width:560px){.step-photo{flex:0 0 calc(50% - 4px)}}
+</style>
+</head>
+<body><div class="wrap">
+
+<header>
+<h1>BAC-TDA build sheet <em>— V3, today's photos only</em></h1>
+<p class="sub">30 steps. Every printed part numbered. Every photo from today's conversation only — no fur-rug, no old kit shots.</p>
+</header>
+
+<div class="notice">
+<strong>About these photos</strong>
+The 11 numbered part tiles below come from the individual blue-piece photos you uploaded today on a white tile background. Four parts (#5, #9, #11, #12) don't have individual photos yet — those tiles say "NO PHOTO" with a request for a pic. <strong>If any part photo looks wrong, just tell me "part N is wrong" and I'll swap it.</strong>
+</div>
+
+<h2>Parts gallery — all 15 numbered</h2>
+<div class="parts-grid"><div class="step-photo"><img src="part_01.jpg" alt="Part 1" loading="lazy"><div class="lbl">#1  Spine LOWER</div></div><div class="step-photo"><img src="part_02.jpg" alt="Part 2" loading="lazy"><div class="lbl">#2  Spine UPPER</div></div><div class="step-photo"><img src="part_03.jpg" alt="Part 3" loading="lazy"><div class="lbl">#3  Chassis BASE</div></div><div class="step-photo"><img src="part_04.jpg" alt="Part 4" loading="lazy"><div class="lbl">#4  Enclosure</div></div><div class="step-photo"><img src="part_05.jpg" alt="Part 5" loading="lazy"><div class="lbl">#5  Actuator MNT</div></div><div class="step-photo"><img src="part_06.jpg" alt="Part 6" loading="lazy"><div class="lbl">#6  Solenoid BRKT</div></div><div class="step-photo"><img src="part_07.jpg" alt="Part 7" loading="lazy"><div class="lbl">#7  BAC CLAMP</div></div><div class="step-photo"><img src="part_08.jpg" alt="Part 8" loading="lazy"><div class="lbl">#8  Cell MOUNT</div></div><div class="step-photo"><img src="part_09.jpg" alt="Part 9" loading="lazy"><div class="lbl">#9  Platform TOP</div></div><div class="step-photo"><img src="part_10.jpg" alt="Part 10" loading="lazy"><div class="lbl">#10 Cradle</div></div><div class="step-photo"><img src="part_11.jpg" alt="Part 11" loading="lazy"><div class="lbl">#11 Luer HOLDER</div></div><div class="step-photo"><img src="part_12.jpg" alt="Part 12" loading="lazy"><div class="lbl">#12 Carriage</div></div><div class="step-photo"><img src="part_13.jpg" alt="Part 13" loading="lazy"><div class="lbl">#13 Joint PLATE</div></div><div class="step-photo"><img src="part_14.jpg" alt="Part 14" loading="lazy"><div class="lbl">#14 TFT BEZEL</div></div><div class="step-photo"><img src="part_15.jpg" alt="Part 15" loading="lazy"><div class="lbl">#15 Keyhole CLIP</div></div></div>
+
+<div class="toc">
+<strong>Jump to step:</strong><br>
+<a href="#step1" class="">01</a><a href="#step2" class="">02</a><a href="#step3" class="">03</a><a href="#step4" class="">04</a><a href="#step5" class="">05</a><a href="#step6" class="">06</a><a href="#step7" class="">07</a><a href="#step8" class="">08</a><a href="#step9" class="">09</a><a href="#step10" class="">10</a><a href="#step11" class="">11</a><a href="#step12" class="">12</a><a href="#step13" class="">13</a><a href="#step14" class="">14</a><a href="#step15" class="new">15</a><a href="#step16" class="">16</a><a href="#step17" class="">17</a><a href="#step18" class="">18</a><a href="#step19" class="">19</a><a href="#step20" class="">20</a><a href="#step21" class="">21</a><a href="#step22" class="">22</a><a href="#step23" class="">23</a><a href="#step24" class="">24</a><a href="#step25" class="new">25</a><a href="#step26" class="">26</a><a href="#step27" class="">27</a><a href="#step28" class="">28</a><a href="#step29" class="new">29</a><a href="#step30" class="">30</a>
+</div>
+
+
+<div class="step" id="step1">
+  <div class="step-num">STEP 01</div>
+  <h2>Stick on the four rubber feet</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_03.jpg" alt="Part 3" loading="lazy"><div class="lbl">#3  Chassis BASE</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 4× black self-adhesive rubber feet</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #3 (chassis base). Flip it upside down.</li>
+      <li>Peel each foot's backing.</li>
+      <li>Stick one in each of the 4 corner counterbores.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Plate sits flat with no rocking when right-side up.</div>
+</div>
+
+<div class="step" id="step2">
+  <div class="step-num">STEP 02</div>
+  <h2>Install heat-set inserts BEFORE any bolts</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_01.jpg" alt="Part 1" loading="lazy"><div class="lbl">#1  Spine LOWER</div></div><div class="step-photo"><img src="part_02.jpg" alt="Part 2" loading="lazy"><div class="lbl">#2  Spine UPPER</div></div><div class="step-photo"><img src="part_05.jpg" alt="Part 5" loading="lazy"><div class="lbl">#5  Actuator MNT</div></div><div class="step-photo"><img src="part_06.jpg" alt="Part 6" loading="lazy"><div class="lbl">#6  Solenoid BRKT</div></div><div class="step-photo"><img src="part_07.jpg" alt="Part 7" loading="lazy"><div class="lbl">#7  BAC CLAMP</div></div><div class="step-photo"><img src="part_08.jpg" alt="Part 8" loading="lazy"><div class="lbl">#8  Cell MOUNT</div></div><div class="step-photo"><img src="part_09.jpg" alt="Part 9" loading="lazy"><div class="lbl">#9  Platform TOP</div></div><div class="step-photo"><img src="part_13.jpg" alt="Part 13" loading="lazy"><div class="lbl">#13 Joint PLATE</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 20× M3×5 brass inserts (Kadrick kit) + 6× M4×8 inserts + soldering iron @ 220 °C</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Find every M3 hole on: Part #1 back-face (2), #2 back-face (2), #13 (4), #1 base tab (2), #7 tab (3), #6 (2), #5 (4).</li>
+      <li>Place an insert on top of each hole, knurls down.</li>
+      <li>Press iron tip to the insert until flush. Wait 60 s before removing.</li>
+      <li>Repeat for 6 M4×8 holes on Parts #8 + #9.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Each insert flush. None tilted, none sunk too deep.</div>
+</div>
+
+<div class="step" id="step3">
+  <div class="step-num">STEP 03</div>
+  <h2>Stand spine LOWER on the base</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_01.jpg" alt="Part 1" loading="lazy"><div class="lbl">#1  Spine LOWER</div></div><div class="step-photo"><img src="part_03.jpg" alt="Part 3" loading="lazy"><div class="lbl">#3  Chassis BASE</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M3 × 16 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #1 (spine LOWER). Bottom has a 30 mm perpendicular tab.</li>
+      <li>Position on the rear-left of Part #3, tab flat on base.</li>
+      <li>From under the base, push 2× M3×16 up through into the tab's inserts.</li>
+      <li>Tighten snug, not gorilla-tight.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Spine vertical, doesn't wiggle. AR slot faces forward.</div>
+</div>
+
+<div class="step" id="step4">
+  <div class="step-num">STEP 04</div>
+  <h2>Stack spine UPPER + joint plate behind</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_02.jpg" alt="Part 2" loading="lazy"><div class="lbl">#2  Spine UPPER</div></div><div class="step-photo"><img src="part_13.jpg" alt="Part 13" loading="lazy"><div class="lbl">#13 Joint PLATE</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 4× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Rest Part #2 (spine UPPER) on top of Part #1.</li>
+      <li>Hold Part #13 (joint plate) against the BACK FACE of the spine.</li>
+      <li>Tongue drops into the matching pocket so it self-aligns across the seam.</li>
+      <li>From behind, push 4× M3×12 through plate's corners into the spine's back inserts.</li>
+      <li>Tighten in a cross pattern.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Two spine halves are now ONE rigid 340 mm column.</div>
+</div>
+
+<div class="step" id="step5">
+  <div class="step-num">STEP 05</div>
+  <h2>Mount the load-cell mount to the base</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_03.jpg" alt="Part 3" loading="lazy"><div class="lbl">#3  Chassis BASE</div></div><div class="step-photo"><img src="part_08.jpg" alt="Part 8" loading="lazy"><div class="lbl">#8  Cell MOUNT</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 4× M3 × 12 mm screws + washers if needed</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #8 (load cell mount). M4 holes are on TOP.</li>
+      <li>Position on front-center of Part #3, M4 holes facing UP.</li>
+      <li>From under the base, push 4× M3×12 up into the 4 M3 holes on the bottom of Part #8.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Mount is rigid. M4 holes on top pointing straight up.</div>
+  <div class="note">⚠️ Hilitchi kit jumps from M3×8 to M3×12. Use M3×12; add a washer if it bottoms out.</div>
+</div>
+
+<div class="step" id="step6">
+  <div class="step-num">STEP 06</div>
+  <h2>Bolt the 3 kg load cell to its mount</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_08.jpg" alt="Part 8" loading="lazy"><div class="lbl">#8  Cell MOUNT</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M4 × 16 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>The cell's cabled end (4 wires: R/G/B/W) is the FIXED end.</li>
+      <li>Place fixed end on top of Part #8, aligned with the 2 M4 holes.</li>
+      <li>Drop 2× M4×16 through the cell into the M4 inserts. Tighten.</li>
+      <li>Free end now cantilevers past the mount, unsupported.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Cell bolted at one end only. Free end flexes when pressed.</div>
+  <div class="note">⚠️ Your kit shipped a 3 kg cell (BOM was 100 g). Practical accuracy will be ~±0.3 g instead of ±0.05 g. Acceptable for the first build; swap to a Sparkfun TAL220 100g cell later for tight precision.</div>
+</div>
+
+<div class="step" id="step7">
+  <div class="step-num">STEP 07</div>
+  <h2>Strain-relieve the cable BEFORE the platform goes on</h2>
+  
+  <div class="hw"><strong>Hardware needed:</strong> 1× zip tie</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Route cable away from the cell active area, toward the rear of the spine.</li>
+      <li>Leave a 30 mm service loop near the cell.</li>
+      <li>Zip-tie cable to one of the rail holes on the back of the spine.</li>
+      <li>Trim zip-tie tail.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Cable doesn't pass over/under the free end. No tension on the cell.</div>
+</div>
+
+<div class="step" id="step8">
+  <div class="step-num">STEP 08</div>
+  <h2>Bolt the platform to the cell's free end</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_09.jpg" alt="Part 9" loading="lazy"><div class="lbl">#9  Platform TOP</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M4 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #9 (platform top). 2 M4 holes on one short edge.</li>
+      <li>Drop holes onto M4 inserts on the FREE end of the cell.</li>
+      <li>Push 2× M4×12 down through. Tighten.</li>
+      <li>Confirm a visible 2 mm air gap around the platform.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Platform supported only by the cell. Air gap visible all around.</div>
+</div>
+
+<div class="step" id="step9">
+  <div class="step-num">STEP 09</div>
+  <h2>Snap the peptide cradle on top of the platform</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_09.jpg" alt="Part 9" loading="lazy"><div class="lbl">#9  Platform TOP</div></div><div class="step-photo"><img src="part_10.jpg" alt="Part 10" loading="lazy"><div class="lbl">#10 Cradle</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M3 × 8 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #10 (cradle). Flange has 2 M3 holes.</li>
+      <li>Center on Part #9, holes aligned with platform's inner M3 holes.</li>
+      <li>Push 2× M3×8 down through. Snug only.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Cradle centered on platform, cup opening up.</div>
+</div>
+
+<div class="step" id="step10">
+  <div class="step-num">STEP 10</div>
+  <h2>Clip the BAC vial clamp onto the spine top</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_01.jpg" alt="Part 1" loading="lazy"><div class="lbl">#1  Spine LOWER</div></div><div class="step-photo"><img src="part_07.jpg" alt="Part 7" loading="lazy"><div class="lbl">#7  BAC CLAMP</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 3× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #7 (BAC clamp). Tab has 3 holes at 20 mm pitch.</li>
+      <li>Hold clamp at top of spine, tab against front face, cylinder pointing UP.</li>
+      <li>Push 3× M3×12 through tab into the 3 topmost spine rail-holes.</li>
+      <li>Snug. Add washers if threads bottom out.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Clamp rigid, cylinder vertical, opening at top.</div>
+</div>
+
+<div class="step" id="step11">
+  <div class="step-num">STEP 11</div>
+  <h2>Press the Mini-Spike into the clamp WITH O-ring</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_07.jpg" alt="Part 7" loading="lazy"><div class="lbl">#7  BAC CLAMP</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 1× B. Braun Mini-Spike Plus + 1× O-ring 15×1.9 mm (ZDBB kit)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Pull a 15×1.9 mm O-ring from the ZDBB kit (try 14 or 16 if loose/tight).</li>
+      <li>Roll O-ring onto the spike body's grip area (wider section).</li>
+      <li>From below the clamp, push spike up into the round socket until O-ring seats and spike is snug.</li>
+      <li>Pointed end now sticks up inside the clamp.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Spike doesn't fall under its own weight. Tug-test ~1-2 N pull.</div>
+  <div class="note">💡 O-ring is better than the silicone-sealant spec — reversible, no cure time, no contamination.</div>
+</div>
+
+<div class="step" id="step12">
+  <div class="step-num">STEP 12</div>
+  <h2>Clip the solenoid bracket to the spine middle</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_06.jpg" alt="Part 6" loading="lazy"><div class="lbl">#6  Solenoid BRKT</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #6 (solenoid bracket). 2 M3 holes at 20 mm pitch.</li>
+      <li>Hold against spine front, ~250 mm below the BAC clamp.</li>
+      <li>Push 2× M3×12 through base into 2 spine rail holes.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Bracket rigid. Vertical back-wall has 2 holes for the solenoid.</div>
+</div>
+
+<div class="step" id="step13">
+  <div class="step-num">STEP 13</div>
+  <h2>Mount the solenoid on the bracket</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_06.jpg" alt="Part 6" loading="lazy"><div class="lbl">#6  Solenoid BRKT</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li><strong>Confirm label says DIRECT-ACTING + 0 psi min.</strong> If 'pilot operated', stop — won't work on gravity.</li>
+      <li>Hold solenoid against Part #6 back wall, inlet on TOP, outlet on BOTTOM.</li>
+      <li>Push 2× M3×12 through bracket into solenoid mounting holes.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Solenoid rigid. Both barbs clear. Coil terminals point rear.</div>
+</div>
+
+<div class="step" id="step14">
+  <div class="step-num">STEP 14</div>
+  <h2>Bolt the actuator mount below the solenoid</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_05.jpg" alt="Part 5" loading="lazy"><div class="lbl">#5  Actuator MNT</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 4× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #5 (actuator mount). U-channel on the front, 4 M3 clearance holes on back.</li>
+      <li>Position on spine front, ~80 mm below solenoid bracket. U-channel opens UP.</li>
+      <li>Push 4× M3×12 through the back into 4 spine rail-holes (2×2).</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Mount rigid. U-channel slot open for the actuator body.</div>
+</div>
+
+<div class="step" id="step15">
+  <div class="step-num">STEP 15</div>
+  <h2>⭐ NEW: Mount the micro limit switch on the U-channel for HOMING</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_05.jpg" alt="Part 5" loading="lazy"><div class="lbl">#5  Actuator MNT</div></div><div class="step-photo"><img src="part_15.jpg" alt="Part 15" loading="lazy"><div class="lbl">#15 Keyhole CLIP</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 1× micro limit switch w/ roller arm + 2× M2 × 6 mm screws (or CA glue)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Position switch on TOP face of Part #5's U-channel, lever pointing DOWN into channel.</li>
+      <li>Option A: drill 2× 2mm pilots, install M2 inserts (Kadrick has them), bolt with M2×6.</li>
+      <li>Option B: one drop CA glue, hold 30 s.</li>
+      <li>Wire: COMMON → ESP32 GND, NORMALLY-OPEN → ESP32 GPIO 25.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> When you push the rod up by hand, the lever clicks BEFORE the rod hits the body.</div>
+  <div class="note">💡 Roller-tip converts vertical motion into a smooth press. Firmware uses this for boot homing + overshoot bailout.</div>
+</div>
+
+<div class="step" id="step16">
+  <div class="step-num">STEP 16</div>
+  <h2>Drop the linear actuator into the mount</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_05.jpg" alt="Part 5" loading="lazy"><div class="lbl">#5  Actuator MNT</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 1–2× zip ties</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Threaded rod end points DOWN.</li>
+      <li>Slide actuator body into Part #5's U-channel from the top. Top will press against limit switch lever — correct.</li>
+      <li>Wrap 1–2 zip ties through strap slots, around actuator. Trim tails.</li>
+      <li>Test 12V to wires — confirm full ~50 mm stroke.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Actuator can't wiggle. Rod travels smoothly. When fully retracted, limit switch is CLICKED.</div>
+</div>
+
+<div class="step" id="step17">
+  <div class="step-num">STEP 17</div>
+  <h2>Build the needle subassembly (commercial luer parts)</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_11.jpg" alt="Part 11" loading="lazy"><div class="lbl">#11 Luer HOLDER</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× luer-to-1/8″ barb adapter + 1× Millex-FG 0.22 µm + 2× 21G luer-lock needles (GREEN hub) + 200 mm of 3 mm ID silicone tubing</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #11 (luer holder). 2 large-bore through-holes side by side.</li>
+      <li>Press barb adapter into LEFT hole. Barb out the BACK, female luer faces FRONT.</li>
+      <li>Press Millex-FG into RIGHT hole. Female luer faces FRONT, male luer end faces UP.</li>
+      <li>Thread 21G needle onto front of barb adapter. Hand-tight.</li>
+      <li>Thread 21G needle onto front of Millex-FG. Hand-tight.</li>
+      <li>Cut 200 mm of 3 mm ID silicone tubing. Heat-dip one end in 70 °C water 10 s.</li>
+      <li>Push softened end onto the back barb of Part #11. Twist as you push.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Both luer parts firmly seated. Needles point same direction (down, parallel).</div>
+</div>
+
+<div class="step" id="step18">
+  <div class="step-num">STEP 18</div>
+  <h2>Bolt the needle subassembly to the carriage</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_11.jpg" alt="Part 11" loading="lazy"><div class="lbl">#11 Luer HOLDER</div></div><div class="step-photo"><img src="part_12.jpg" alt="Part 12" loading="lazy"><div class="lbl">#12 Carriage</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #12 (carriage). Bottom face has 2 M3 clearance holes.</li>
+      <li>Place Part #11 (with adapters + needles) under carriage, aligned over Part #11's TOP inserts.</li>
+      <li>Push 2× M3×12 down through carriage into Part #11.</li>
+      <li>Needles now hang DOWN from carriage.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Subassembly rigid. AR EAR on Part #12 sticks out perpendicular to needles.</div>
+</div>
+
+<div class="step" id="step19">
+  <div class="step-num">STEP 19</div>
+  <h2>REMOVE the platform (don't skip this)</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_09.jpg" alt="Part 9" loading="lazy"><div class="lbl">#9  Platform TOP</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> (undo 2× M4 from step 8)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Back out 2× M4×12 holding Part #9 to cell free end.</li>
+      <li>Set Part #9 + cradle (#10) aside, screws with them.</li>
+      <li>Cell free end is now bare and unsupported.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Platform OFF. Prevents you instinctively grabbing it during the fiddly next step.</div>
+</div>
+
+<div class="step" id="step20">
+  <div class="step-num">STEP 20</div>
+  <h2>Thread the carriage onto the actuator rod (platform OFF)</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_11.jpg" alt="Part 11" loading="lazy"><div class="lbl">#11 Luer HOLDER</div></div><div class="step-photo"><img src="part_12.jpg" alt="Part 12" loading="lazy"><div class="lbl">#12 Carriage</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> (no fasteners)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Hold carriage subassembly under the rod. Needles point DOWN.</li>
+      <li>Rod has M4 threads; Part #12 has an M4 hole on top.</li>
+      <li>Thread Part #12 onto rod by rotating carriage clockwise. Watch the AR EAR enter the blind slot in the spine front face.</li>
+      <li>Wind on until snug. Don't force.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Carriage can't rotate (ear locked in slot). Needles straight down, parallel, ~12 mm apart.</div>
+</div>
+
+<div class="step" id="step21">
+  <div class="step-num">STEP 21</div>
+  <h2>Reinstall the platform + cradle</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_09.jpg" alt="Part 9" loading="lazy"><div class="lbl">#9  Platform TOP</div></div><div class="step-photo"><img src="part_10.jpg" alt="Part 10" loading="lazy"><div class="lbl">#10 Cradle</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> (re-use 2× M4 from step 19)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Lift Part #9 back onto cell free end.</li>
+      <li>Drop 2× M4×12 back through. Tighten.</li>
+      <li>Confirm 2 mm air gap intact.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Platform reinstalled. Air gap intact. Cradle still attached.</div>
+</div>
+
+<div class="step" id="step22">
+  <div class="step-num">STEP 22</div>
+  <h2>Connect the silicone tube to the solenoid</h2>
+  
+  <div class="hw"><strong>Hardware needed:</strong> (friction fit, no fasteners)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Heat-dip the silicone tube end (from step 17) again.</li>
+      <li>Push firmly onto solenoid OUTLET barb (bottom). Twist as you push.</li>
+      <li>Cut second tube ~120 mm. One end onto spike's barb (under BAC clamp); other end onto solenoid INLET (top).</li>
+      <li>No kinks, no sharp bends < 15 mm radius.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Fluid path: BAC → spike → tube → sol IN → sol OUT → tube → adapter → water needle → vial. Vent: vial → vent needle → adapter → Millex-FG → atmosphere.</div>
+</div>
+
+<div class="step" id="step23">
+  <div class="step-num">STEP 23</div>
+  <h2>Mount the electronics enclosure on the side of the spine</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_04.jpg" alt="Part 4" loading="lazy"><div class="lbl">#4  Enclosure</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 2× M3 × 12 mm screws</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #4 (enclosure). Back face has 2 M3 clearance holes.</li>
+      <li>Position against spine SIDE face, mid-height, screen cutout pointing FORWARD.</li>
+      <li>Push 2× M3×12 through the back into side-rail spine holes.</li>
+      <li>Don't crack the walls.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Enclosure rigid. Screen cutout forward. Cable pass-through faces DOWN.</div>
+</div>
+
+<div class="step" id="step24">
+  <div class="step-num">STEP 24</div>
+  <h2>⭐ NEW: Snap the TFT bezel into the enclosure front</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_04.jpg" alt="Part 4" loading="lazy"><div class="lbl">#4  Enclosure</div></div><div class="step-photo"><img src="part_14.jpg" alt="Part 14" loading="lazy"><div class="lbl">#14 TFT BEZEL</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 4× M2.5 × 6 mm screws OR 2 drops CA glue</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Take Part #14 (TFT bezel). Rectangular plate with center cutout.</li>
+      <li>From inside, slide your TFT display into the back of the bezel so the screen aligns with the cutout.</li>
+      <li>Drop bezel into Part #4's front face screen window.</li>
+      <li>Secure with 4× M2.5×6 through corner holes into pre-printed bosses (or CA glue).</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Screen centered in front face. No light leaks around edges.</div>
+</div>
+
+<div class="step" id="step25">
+  <div class="step-num">STEP 25</div>
+  <h2>⭐ NEW: Crimp JST-XH harnesses for every sensor + actuator</h2>
+  
+  <div class="hw"><strong>Hardware needed:</strong> EGSCST 630-pc JST-XH kit + crimp tool</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Cut wire to length for each run:</li>
+      <li>&nbsp;&nbsp;Load cell → HX711: 4-wire, 200 mm</li>
+      <li>&nbsp;&nbsp;HX711 → ESP32: 4-wire, 150 mm</li>
+      <li>&nbsp;&nbsp;Encoder → ESP32: 5-wire, 150 mm</li>
+      <li>&nbsp;&nbsp;Solenoid → MOSFET: 2-wire, 300 mm</li>
+      <li>&nbsp;&nbsp;Actuator → L298N: 2-wire, 300 mm</li>
+      <li>&nbsp;&nbsp;Limit switch → ESP32: 2-wire, 250 mm</li>
+      <li>&nbsp;&nbsp;Piezo buzzer → ESP32: 2-wire, 150 mm</li>
+      <li>Strip 3 mm, crimp on JST pin, slot into 2/3/4/5-pin housing.</li>
+      <li>Tug-test each crimp.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> All 7 harnesses crimped + tape-flag labeled.</div>
+</div>
+
+<div class="step" id="step26">
+  <div class="step-num">STEP 26</div>
+  <h2>Wire the perfboard and flash firmware</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_04.jpg" alt="Part 4" loading="lazy"><div class="lbl">#4  Enclosure</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 7×9 cm perfboard + ESP32 + HX711 + L298N + IRLZ44N + 1N5822 + LM2596 + 10-pos green screw terminal + piezo buzzer + red rocker switch + 12V/2A PSU</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Lay out per the wiring page (https://crossfitblaze.com/openclaw/wiring.html).</li>
+      <li>Suggested: terminal block at bottom edge, buck top-left, ESP32 center, HX711 top-right, L298N + MOSFET right side, JST male headers on edges.</li>
+      <li>Solder it. 1N5822 Schottky across solenoid + actuator (anode to load-, cathode to load+).</li>
+      <li>Cut rocker switch into +12V line BEFORE the buck — that's your e-stop.</li>
+      <li>Piezo buzzer: ESP32 GPIO 27 + GND with 100 Ω series resistor.</li>
+      <li>Mount perfboard inside Part #4 with 4× M3×8 standoffs.</li>
+      <li>Plug in all 7 JST harnesses.</li>
+      <li>Wire: barrel jack → 2A fuse → rocker → terminal block 12V → distribute.</li>
+      <li>Flash firmware/gravimetric_dispenser.ino v0.3.0. DO NOT toggle the rocker yet.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> All cables plugged. Rocker OFF. Nothing shorted (next step verifies).</div>
+</div>
+
+<div class="step" id="step27">
+  <div class="step-num">STEP 27</div>
+  <h2>Pre-power multimeter checks</h2>
+  
+  <div class="hw"><strong>Hardware needed:</strong> Multimeter</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Rocker OFF, 12V UNPLUGGED, meter on Ω.</li>
+      <li>+12V to GND: > 1 kΩ.</li>
+      <li>+5V to GND: > 500 Ω.</li>
+      <li>+3.3V to GND: > 500 Ω.</li>
+      <li>MOSFET gate to source (GND): ~100 kΩ.</li>
+      <li>Diode-test across 1N5822 flyback: stripe-side OL, anode-side ~0.3 V.</li>
+      <li>Limit switch: push rod up → COM-NO short (< 1 Ω); rod down → OL.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> All six checks pass. Fix any short BEFORE flipping rocker on.</div>
+</div>
+
+<div class="step" id="step28">
+  <div class="step-num">STEP 28</div>
+  <h2>First power-on + calibrate</h2>
+  
+  <div class="hw"><strong>Hardware needed:</strong> 10 g calibration weight (or 2 US nickels)</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Plug in 12 V. <strong>Flip rocker ON.</strong></li>
+      <li>Serial Monitor 115200 → 'Firmware 0.3.0-2026-04-19'.</li>
+      <li>HOMING runs: actuator retracts until limit switch trips, single beep.</li>
+      <li>TFT shows DISPENSER 2.0 mL.</li>
+      <li>HOLD encoder 2 s → CAL mode.</li>
+      <li>Cradle empty → press encoder → tare.</li>
+      <li>Place 10 g weight → press encoder → cal saved. Expect 10.0 ± 0.3 g on 3 kg cell.</li>
+      <li>Remove weight → reading near 0.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> Cal saved. Single boot beep heard. No errors.</div>
+</div>
+
+<div class="step" id="step29">
+  <div class="step-num">STEP 29</div>
+  <h2>⭐ NEW: Prime the fluid path with a syringe</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_10.jpg" alt="Part 10" loading="lazy"><div class="lbl">#10 Cradle</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> 1× luer-lock syringe + 5 mL DI water + empty 2R vial</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Fill syringe with 5 mL DI water.</li>
+      <li>Disconnect silicone tube from spike barb.</li>
+      <li>Push syringe directly onto spike barb.</li>
+      <li>Place empty 2R vial in cradle.</li>
+      <li>Slowly push 3-4 mL through: syringe → barb → tube → solenoid (manually energize by touching coil leads to +12 V) → tube → adapter → water needle → vial.</li>
+      <li>Watch tubing — solid water = primed.</li>
+      <li>Pull syringe off. Reconnect silicone tube to spike barb.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> No visible air bubbles in any tubing segment.</div>
+  <div class="note">💡 Skipping this = first dispense will be off by 30-50%. Re-prime any time you see drift mid-run.</div>
+</div>
+
+<div class="step" id="step30">
+  <div class="step-num">STEP 30</div>
+  <h2>First wet test</h2>
+  <div class="step-photos"><div class="step-photo"><img src="part_10.jpg" alt="Part 10" loading="lazy"><div class="lbl">#10 Cradle</div></div></div>
+  <div class="hw"><strong>Hardware needed:</strong> Filled BAC vial + new 2R vial</div>
+  <h3>How:</h3>
+  <ol>
+      <li>Fill 30 mL BAC vial with DI water (NOT real bacteriostatic for test 1).</li>
+      <li>Cap with BLUE crimp stopper.</li>
+      <li>INVERT and push cap onto spike under BAC clamp. Small puff = punctured.</li>
+      <li>Place fresh empty 2R vial (gray/black stopper) on cradle.</li>
+      <li>Target = 1.0 mL. Encoder → confirm → GO.</li>
+      <li>Watch: needles descend → solenoid clicks → cell reading climbs → ~0.97 g → solenoid closes → settle → 'DONE: 1.00 mL' → triple beep → needles retract → limit switch trips.</li>
+      <li>Repeat 2 more times. Expect 1.00 mL ± 0.3 g on 3 kg cell.</li>
+  </ol>
+  <div class="verify"><strong>Done when:</strong> 1.00 mL ± 0.3 g delivered. No leaks. BAC level dropped. Triple beep.</div>
+  <div class="note">🎉 First dispense done.</div>
+</div>
+
+<footer>
+<p>BAC-TDA · 30 steps · REV B7 · V3 (fresh from today's photos) · hosted on GitHub Pages</p>
+</footer>
+
+</div></body></html>
